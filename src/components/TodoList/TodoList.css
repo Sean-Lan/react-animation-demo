@@ -1,0 +1,71 @@
+.todo-container {
+    margin: 20px 40px;
+}
+.todo-list {
+    list-style: none;
+    text-align: left;
+    line-height: 2.0;
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.todo-input {
+    display: block;
+    width: 100%;
+    padding: 0 10px;
+    line-height: 2.0;
+    font-size: 18px;
+}
+
+.todo-desc {
+    padding: 0 10px;
+    font-size: 10px;
+    color: gray;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-up {
+    0% {
+        opacity: 0; transform: translateY(3em);
+    }
+    50% {
+        background-color: green;
+    }
+    100% {
+        background-color: transparent;
+        opacity: 1; transform: translateY(none);
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        background-color: red;
+    }
+    100% {
+        background-color: transparent;
+        opacity: 0;
+    }
+}
+
+.item-appear {
+    animation: 1s cubic-bezier(.05,.98,.17,.97) forwards fade-in;
+}
+
+.item-enter {
+    animation: 1s cubic-bezier(.05,.98,.17,.97) forwards fade-up;
+}
+
+.item-leave {
+    animation: 1s cubic-bezier(.05,.98,.17,.97) forwards fade-out;
+}
